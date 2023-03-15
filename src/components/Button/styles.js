@@ -4,8 +4,7 @@ export const ButtonContiner = styled.button`
     background: #565656;
     border-radius: 22px;
     position: relative;
-
-    color: #FFF;
+    color: #FFFFFF;
     padding: 2px 12px;
     min-width: 120px;
     width: 100%;
@@ -32,5 +31,7 @@ export const ButtonContiner = styled.button`
             height: calc(100% + 10px);
             border-radius: 22px;
         }
-    `}
+    `
+    }
+
 `
