@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.main`
     width: 100%;
     max-width: 80%;
     margin: 0 auto;
     margin-top: 120px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,7 +13,7 @@ export const Container = styled.main`
 `
 
 export const Wrapper = styled.div`
-    max-width: 300px;
+    max-width: 350px;
 `
 
 export const Column = styled.div`
@@ -28,7 +29,6 @@ export const Row = styled.div`
     align-items: center;
     margin-top: 20px;
 `
-
 
 export const Title = styled.h2`
     font-family: 'Open Sans';
@@ -59,21 +59,19 @@ export const SubtitleLogin = styled.p`
     margin-bottom: 35px;
 `
 
-
-export const EsqueciText = styled.p`
+export const Text = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 19px;
-    color: #E5E044;
+    color: #FFFFFF;
 `
 
-export const CriarText = styled.p`
+export const LoginText = styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    color: #23DD7A;
+    color: #FFFFFFF;
 `

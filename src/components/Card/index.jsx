@@ -17,9 +17,10 @@ const Card = () => {
             <ImageBackground src="https://tse3.mm.bing.net/th/id/OIP.7RPJLxWEg7o0xkCu6PNf0QHaCs?pid=ImgDet&rs=1" />
             <Content>
                 <UserInfo>
-                    <UserPicture src="https://avatars.githubusercontent.com/u/112562688?v=4" />
+
+                    <UserPicture src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHFfju91ZncmZeoMS_9uTEQkoO8wlvh-k7M78DZhch94TW8aT7lG9_ZjOThwxcvKXZYEE&usqp=CAU" />
                     <div>
-                        <h4>Joao Guilherme</h4>
+                        <h4>Aluno(a)</h4>
                         <p>Há 8 minutos</p>
                     </div>
                 </UserInfo>
