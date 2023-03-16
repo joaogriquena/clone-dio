@@ -1,0 +1,16 @@
+{
+    "Users": [
+        {
+            "id": 1,
+            "name": "Joao",
+            "email": "joao@gmail.com",
+            "senha": "123456"
+        },
+        {
+            "id": 2,
+            "name": "Jose",
+            "email": "jose@gmail.com",
+            "senha": "123456"
+        }
+    ]
+}
