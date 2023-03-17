@@ -8,18 +8,23 @@ import { api } from '../../services/api';
 import { useForm } from "react-hook-form";
 
 import { Column, Container, LoginText, Row, SubtitleLogin, Title, TitleLogin, Wrapper, Text } from './styles'
+import { IFormData } from "./types";
 
 const Cadastro = () => {
     const navigate = useNavigate()
 
-    const { control, handleSubmit, formState: { errors } } = useForm({
+    const handleClickEnter = () => {
+        navigate('/feed')
+    }
+
+    const { control, handleSubmit, formState: { errors } } = useForm<IFormData>({
         reValidateMode: 'onChange',
         mode: 'onChange',
     });
 
-    const onSubmit = async (formData) => {
+    const onSubmit = async (formData: IFormData) => {
         try {
-            const { data } = await api.get(`/users?email=${formData.email}&senha=${formData.senha}`);
+            const { data } = await api.get(`/users?email=${formData.email}&senha=${formData.password}`);
 
             if (data.length && data[0].id) {
                 navigate('/feed')
@@ -50,15 +55,15 @@ const Cadastro = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
 
                             <Input placeholder="Nome Completo" leftIcon={<MdAccountCircle />} name="nomecompleto" control={control} />
-                            {errors.nome && <span>Nome é obrigatório</span>}
+                            {errors.name && <span>Nome é obrigatório</span>}
 
                             <Input placeholder="E-mail" leftIcon={<MdEmail />} name="email" control={control} />
                             {errors.email && <span>E-mail é obrigatório</span>}
 
                             <Input type="password" placeholder="Senha" leftIcon={<MdLock />} name="senha" control={control} />
+                            {errors.password && <span>Senha é obrigatório</span>}
 
-                            {errors.senha && <span>Senha é obrigatório</span>}
-                            <Button title="Criar minha conta" variant="secondary" type="submit" />
+                            <Button title="Criar minha conta" variant="secondary" type="submit" onClick={handleClickEnter} />
 
                         </form>
                         <Row>
